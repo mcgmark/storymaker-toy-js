@@ -1,0 +1,339 @@
+@charset "utf-8";
+/* Assignment 1 | COMP1073 Client-Side JavaScript */
+
+
+/* Global Styles Start */
+body {  
+    background-color: #1589bc;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.25em;
+    color: #ffffff;
+    margin: 0px;
+}
+/* Global Styles End */
+
+/* Header Styles Start */
+header {
+    font-family: Sans-serif;
+    width: 100%;
+    background-color: #003f58;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+
+#header-inner {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Header Styles End */
+
+/* Story output element styles start */
+
+#story {
+    font-size: 2em;
+    color: #780993;
+    font-weight: 900;
+    padding: 10px 20px;
+    background-color: #f9e92b;
+    border: 3px solid #fffdd2;
+    box-shadow: 1px 1px 3px  #00000070;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media only screen and (min-width: 727px) {
+    
+    #story {
+       font-size: 2.5em;
+       box-shadow: 10px 10px 6px  #00000030;
+    }
+}  
+
+/* Story output element styles end */
+
+/* Story Maker Container Start */
+
+#story-maker-container {
+    display: flex;
+    flex-direction: column;
+    margin-top:20px;
+    margin-bottom: 60px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+@media only screen and (min-width: 727px) {
+    #story-maker-container {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        min-width: 700px; 
+        max-height: 870px; 
+          
+    }
+
+    body {  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Story Maker Container End */
+
+/* Icon Side Styles Start */
+.icon-head {
+    align-self: center;
+}
+
+.icon {   
+    text-align: center;
+    align-self: flex-end;
+}
+
+.icon img {
+    max-width: 100%;
+}
+
+#icon-side {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+}
+
+div#nounOne-icons, div#verb-icons, div#adjective-icons, div#nounTwo-icons, div#setting-icons {
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 10px 10px 6px  #00000030;
+    margin-bottom: 4px;
+    justify-content: space-between;
+    flex: 1;
+    padding-left: 5px;
+}
+
+#icon-side p {
+    font-family: 'Source Serif Pro', sans-serif;
+    font-weight: 900;
+    font-size: .8em;
+    text-align: center;
+    margin: 0px;
+    color: #000000;
+ }
+
+#icon-side #nounOne-icons {
+    background-color: #a700ff;
+    border: 3px solid #9c6bdd;
+}
+
+#icon-side #verb-icons {
+    background-color: #00ffe6;
+    border: 3px solid #99fffc;
+}
+
+#icon-side #adjective-icons {
+    background-color: #9cff00;
+    border: 3px solid #d1ff6c;
+}
+
+#icon-side #nounTwo-icons {
+    background-color: #ff8500;
+    border: 3px solid #ffa655;  
+}
+
+#icon-side #setting-icons {
+    background-color: #ff00ff;
+    border: 3px solid #ff78ff;
+}
+
+@media only screen and (min-width: 727px) {
+    #icon-side {
+        display: flex;
+        flex-direction: row;
+        vertical-align: middle;
+        order: 1;
+    }
+
+    #icon-side p {
+        font-size: 1em;
+    }
+
+    div#nounOne-icons, div#verb-icons, div#adjective-icons, div#nounTwo-icons, div#setting-icons {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-right: 4px;
+        padding-top: 7px;
+    }
+
+    .icon {   
+        text-align: center;
+        align-self: auto;
+    }
+
+    .icon img {
+        max-width: 60%;
+    }
+
+}
+
+@media only screen and (min-width: 1120px) {
+    #icon-side p {
+        font-size: 1.2em;
+    }
+}
+
+/* Icon Side Styles End */
+
+/* Button Side Styles Start */
+
+#button-side {
+    background-image: url(../images/svg/speaker.svg);
+    background-size: 50%;
+    background-position: -15% 90%;
+    background-repeat: no-repeat;
+    background-color: #f9e92b;
+    border: 3px solid #fdf9a5;
+    box-shadow: 10px 10px 6px  #00000030;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    order: 1;
+}
+ 
+#buttons-top {
+    display: flex;
+    justify-content: center;
+}
+
+#buttons-top input {
+    max-width: 17%;
+    margin-top: 60px;
+    margin-right: 10px;
+}
+
+#buttons-top input:hover {
+    box-shadow: 7px 7px 10px #ffffff;
+    border-radius: 50%;
+}
+
+#button-side #logo img { 
+    max-width: 90%;
+}
+
+#buttons-bottom {
+    text-align: center;
+    display: flex;
+    margin-left: 45%;
+    padding-top: 15%;
+    margin-bottom: 15%;
+    max-width: 50%;
+}
+
+#buttons-bottom div {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+#buttons-bottom #playback {
+    color: #2b48a7;
+    margin-left: 10px;
+}
+
+#buttons-bottom input {
+    max-width: 70%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#buttons-bottom input:hover {
+    box-shadow: 7px 7px 10px #ffffff;
+    border-radius: 50%;
+}
+
+h3 {
+    color: #b80000;
+    font-size: 1em;
+    margin: 0px;
+    text-shadow: 1px 1px 2px #00000080;
+    transform: skew(2deg,-10deg);
+}
+
+h3 #playback {
+    color: #007ac0;
+}
+
+@media only screen and (min-width: 727px) {
+    #button-side {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        min-width: 325px;
+        max-width: 800px;
+    }    
+        #buttons-bottom {
+            padding-top: 32%;
+    }
+    
+}
+
+@media only screen and (min-width: 865px) {
+    #button-side {
+        min-width: 355px;
+    }      
+}
+
+@media only screen and (min-width: 940px) {
+    #button-side {
+        min-width: 425px;
+    }
+
+    #buttons-bottom {
+        padding-top: 32%;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    #icon-side p {
+        font-size: 1.2em;
+    }
+
+    #button-side {
+        min-width: 600px;
+     
+    }
+
+    #buttons-bottom {
+        padding-top: 15%;
+    }
+
+    h3 {
+        font-size: 1.35em;
+    }
+}
+
+/* Button Side Styles End */

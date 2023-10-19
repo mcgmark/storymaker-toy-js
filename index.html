@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Mark McGuigan | Assignment 1 | COMP1073 Client-Side JavaScript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Add Stylesheets -->
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<!-- Add Javascript -->
+	<script src="js/storymaker.js" defer></script>
+	<!-- Add Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!-- Header Section start -->
+	<header>
+		<div id="header-inner">
+			<h1>Assignment 1 | COMP1073 Client-Side JavaScript</h1>
+			<h2>Mark McGuigan</h2>
+			<p>This project recreates the children's educational toy See-N-Say Story Maker using Javascript. This project incorporates object arrays, conditional statements, functions, and event listeners. Like the real toy this project uses the built in text-to-speech feature of the user's device.   </p>
+		</div>
+	</header>
+	<!-- Header Section end -->
+	<!-- Main Section start -->
+	<main>
+		<!-- Text output paragraph -->
+		<p id="story">Click or tap a button to start making your story!</p>
+		<!-- Application container start -->
+		<div id="story-maker-container">
+			<!-- Left side w/icons start - Images based on original artwork copyright Mattel Toys-->
+			<div id="icon-side">
+				<div id="nounOne-icons"> <!-- 1 -->
+					<div class="icon icon-head">
+						<img src="images/svg/1-head.svg" alt="the turkey">
+					</div>
+					<div class="icon "> 
+						<img src="images/svg/the-turkey.svg" alt="the turkey">
+						<p>The turkey</p>
+					</div>
+					<div class="icon">
+						<img src="images/svg/mom.svg" alt="mom">
+						<p>Mom</p>
+					</div>
+					<div class="icon">
+						<img src="images/svg/dad.svg" alt="dad">
+						<p>Dad</p>
+					</div>
+					<div class="icon">
+						<img src="images/svg/the-dog.svg" alt="the dog">
+						<p>The dog</p>
+					</div>
+					<div class="icon">
+						<img src="images/svg/the-teacher.svg" alt="the teacher">
+						<p>My teacher</p>
+					</div>
+					<div class="icon">
+						<img src="images/svg/the-elephant.svg" alt="the elephant">
+						<p>The elephant</p>
+					</div>
+					<div class="icon">
+						<img src="images/svg/the-cat.svg" alt="the cat">
+						<p>The cat</p>
+					</div>
+				</div>
+				<div id="verb-icons"> <!-- 2 -->
+					<div class="icon icon-head">
+						<img src="images/svg/2-head.svg" alt="the turkey">
+					</div>
+					<div class="icon">
+					<img src="images/svg/sat-on.svg" alt="sat on">
+					<p>sat on</p></div>
+					<div class="icon">
+					<img src="images/svg/ate.svg" alt="ate">
+					<p>ate</p></div>
+					<div class="icon">
+					<img src="images/svg/danced-with.svg" alt="danced with">
+					<p>danced with</p></div>
+					<div class="icon">
+					<img src="images/svg/saw.svg" alt="saw">
+					<p>saw</p></div>
+					<div class="icon">
+					<img src="images/svg/doesnt-like.svg" alt="doesn't like">
+					<p>doesn't like</p></div>
+					<div class="icon">
+					<img src="images/svg/kissed.svg" alt="kissed">
+					<p>kissed</p></div>
+				</div>
+				<div id="adjective-icons"> <!-- 3 -->
+					<div class="icon icon-head">
+						<img src="images/svg/3-head.svg" alt="the turkey">
+					</div>
+					<div class="icon">
+					<img src="images/svg/a-funny.svg" alt="a funny">
+					<p>a funny</p></div>
+					<div class="icon">
+					<img src="images/svg/a-scary.svg" alt="a scary">
+					<p>a scary</p></div>
+					<div class="icon">
+					<img src="images/svg/a-goofy.svg" alt="a goofy">
+					<p>a goofy</p></div>
+					<div class="icon">
+					<img src="images/svg/a-slimey.svg" alt="a slimey">
+					<p>a slimy</p></div>
+					<div class="icon">
+					<img src="images/svg/a-barking.svg" alt="a barking">
+					<p>a barking</p></div>
+					<div class="icon">
+					<img src="images/svg/a-fat.svg" alt="a fat">
+					<p>a fat</p></div>
+				</div>
+				<div id="nounTwo-icons"> <!-- 4 -->
+					<div class="icon icon-head">
+						<img src="images/svg/4-head.svg" alt="the turkey">
+					</div>
+					<div class="icon">
+					<img src="images/svg/goat.svg" alt="goat">
+					<p>goat</p></div>
+					<div class="icon">
+					<img src="images/svg/monkey.svg" alt="monkey">
+					<p>monkey</p></div>
+					<div class="icon">
+					<img src="images/svg/fish.svg" alt="fish">
+					<p>fish</p></div>
+					<div class="icon">
+					<img src="images/svg/cow.svg" alt="cow">
+					<p>cow</p></div>
+					<div class="icon">
+					<img src="images/svg/frog.svg" alt="frog">
+					<p>frog</p></div>
+					<div class="icon">
+					<img src="images/svg/bug.svg" alt="bug">
+					<p>bug</p></div>
+					<div class="icon">
+					<img src="images/svg/worm.svg" alt="worm">
+					<p>worm</p></div>
+				</div>
+				<div id="setting-icons"> <!-- 5 -->
+					<div class="icon icon-head">
+						<img src="images/svg/5-head.svg" alt="the turkey">
+					</div>
+					<div class="icon">
+					<img src="images/svg/on-the-moon.svg" alt="on the moon">
+					<p>on the moon</p></div>
+					<div class="icon">
+					<img src="images/svg/on-the-chair.svg" alt="on the chair">
+					<p>on the chair</p></div>
+					<div class="icon">
+					<img src="images/svg/in-my-spaghetti.svg" alt="in my spaghetti">
+					<p>in my spaghetti</p></div>
+					<div class="icon">
+					<img src="images/svg/in-my-soup.svg" alt="in my soup">
+					<p>in my soup</p></div>
+					<div class="icon">
+					<img src="images/svg/on-the-grass.svg" alt="on the grass">
+					<p>on the grass</p></div>
+					<div class="icon">
+					<img src="images/svg/in-my-shoes.svg" alt="in my shoes">
+					<p>in my shoes</p></div>
+				</div>
+			</div>
+			<!-- Left side w/icons end -->
+			<!-- Right side w/buttons start -->
+			<div id="button-side"> 
+				<div id="buttons-top"> <!-- top buttons -->
+					<input type="image" id="buttonOne" src="images/svg/noun1-button.svg" alt="Button 1 Noun" /> 
+					<input type="image" id="buttonTwo" src="images/svg/verb-button.svg" alt="Button 2 Verb" /> 
+					<input type="image" id="buttonThree" src="images/svg/adjective-button.svg" alt="Button 3 Adjective" /> 
+					<input type="image" id="buttonFour" src="images/svg/nountwo-button.svg" alt="Button 4 Nount Two" /> 
+					<input type="image" id="buttonFive" src="images/svg/setting-button.svg" alt="Button 5 Setting" /> 
+				</div>
+				<div id="logo"> <!-- middle logo -->
+					<img src="images/svg/story-maker-logo.svg" alt="Story maker logo">
+				</div>
+				<div id="buttons-bottom"> <!-- bottom buttons -->	
+					<div>
+						<input type="image" id="randomize" src="images/svg/surprises-button.svg" alt="Randomize Button" /> <!-- Randomize -->
+						<h3>Randomize</h3>	
+					</div>
+					<div>
+						<input type="image" id="playbackbtn" src="images/svg/playback-button.svg" alt="Playback Button" />	 <!-- Playback -->
+						<h3 id="playback">Playback</h3>	
+					</div>
+				</div>
+			</div>
+			<!-- Right side w/buttons end -->
+		</div>
+		<!-- Application container end -->
+	</main>
+	<!-- Main Section end -->
+</body>
+</html>
